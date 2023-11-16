@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto con Javascript</title>
     <link rel="stylesheet" href="./css/style.css">
+    
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--Slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--Moment JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es-do.min.js"></script>
+    <!--Mis Scripts-->
+    <script src="./js/main.js"></script>
 </head>
 <body>
     <section id="global">
@@ -26,18 +38,17 @@
 
         <!-- Slider -->
         <div id="slider">
-
+            <div class="bxslider">
+                <div><img src="./img/hojas.jpg" title="Hojas" /></div>
+                <div><img src="./img/rojo.jpg" title="Rojo" /></div>
+                <div><img src="./img/cielo.jpg" title="Cielo" /></div>
+            </div>
         </div>
 
-        <!--Contenido-->
+        <!--Contenido--> 
         <section id="content">
             <div id="posts">
-                <article class="post">
-                    <h2>Titulo del Articulo</h2>
-                    <span class="date">Fecha de publicacion</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ullamcorper nulla, eget mollis velit. Quisque nec odio euismod, varius turpis eget, lobortis tortor. Fusce vel sem molestie, bibendum nunc nec, condimentum lectus. Sed congue ac dui non placerat. Vestibulum facilisis sagittis orci a porta. Morbi aliquet auctor ornare. Aliquam tincidunt ornare lacus non bibendum. Suspendisse auctor arcu et ipsum eleifend dictum. Cras ex neque, aliquet vitae erat eget, lacinia hendrerit dolor. Morbi vel consectetur lectus. Ut sed erat sagittis, varius lacus pellentesque, semper urna.</p>
-                    <a href="#" class="button-more">Leer mas</a>
-                </article>
+                <!--Cargar Post desde json-->
             </div>
             <aside id="sidebar">
                 <div id="about">
