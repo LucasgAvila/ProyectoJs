@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto con Javascript</title>
@@ -18,7 +18,9 @@
         
     <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
 
-    
+    <!--Plugin Validacion-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
     <!--Mis Scripts-->
     <script src="./js/main.js"></script>
 </head>
@@ -50,21 +52,34 @@
         <section id="content">
             <h2>Sobre mi</h2>
             <div id="box">
-                <!--Cargar Post desde acordeon-->
-                <div id="acordeon">
-                    <h3>Quienes somos?</h3>
-                    <p>
-                        dum nunc nec, condimentum lectus. Sed congue ac dui non placerat. Vestibulum facilisis sagittis orci
-                    </p>
-                    <h3>Nuestros Servicios</h3>
-                    <p>
-                        dum nunc nec, condimentum lectus. Sed congue ac dui non placerat. Vestibulum facilisis sagittis orci
-                    </p>
-                    <h3>Nuestros Clientes</h3>
-                    <p>
-                        dum nunc nec, condimentum lectus. Sed congue ac dui non placerat. Vestibulum facilisis sagittis orci
-                    </p>
-                </div>
+                <!--Cargar Formulario-->
+                <h2>Contacto</h2>
+
+                <form method="post" id="form-contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric" />
+
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname" 
+                    data-validation="alphanumeric"/>
+
+                    <label for="">Email</label>
+                    <input type="email" data-validation="email"/>
+
+                    <label for="">Sexo</label>
+                    <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+                    
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="text" name="date" data-validation="date" date-validation-format="dd-mm-yyyy" >
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number">
+
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
             <aside id="sidebar">
                 <div id="about">
